@@ -1,0 +1,7 @@
+name: 'Share Location'
+type: module
+description: 'API to grab location from user and update on user entity'
+core: 8.x
+package: 'Caninar'
+dependencies:
+  - user

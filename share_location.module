@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains share_location.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function share_location_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the share_location module.
+    case 'help.page.share_location':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('API to grab location from user and update on user entity') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,0 +1,5 @@
+share_location.settings_form:
+  title: 'Share Location Settings'
+  route_name: share_location.settings_form
+  description: 'Set share location parameters'
+  parent: system.admin_config_system

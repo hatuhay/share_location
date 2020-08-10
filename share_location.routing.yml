@@ -1,0 +1,44 @@
+share_location.page_controller_get:
+  path: '/api/user/location/{user}'
+  defaults:
+    _controller: '\Drupal\share_location\Controller\PageController::getLocation'
+    _title: 'Get location'
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      user:
+        type: entity:user
+share_location.page_controller_set:
+  path: '/api/user/location/{user}/set'
+  defaults:
+    _controller: '\Drupal\share_location\Controller\PageController::setLocation'
+    _title: 'Set location'
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      user:
+        type: entity:user
+share_location.map:
+  path: '/user/{user}/map'
+  defaults:
+    _controller: '\Drupal\share_location\Controller\PageController::renderMap'
+    _title: 'Ubicación en tiempo real'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      user:
+        type: entity:user
+share_location.settings_form:
+  path: '/admin/config/share_location/settings'
+  defaults:
+    _form: '\Drupal\share_location\Form\SettingsForm'
+    _title: 'SettingsForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
